@@ -203,3 +203,15 @@ msg2: ##"""
     """##
 
 ```
+
+### Bytes
+
+```shell
+$ cue export bytes.cue
+{
+    "a": "A2FiYw=="
+}
+
+$ echo "A2FiYw==" | base64 -d
+abc%
+```
