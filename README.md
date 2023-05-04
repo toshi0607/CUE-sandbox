@@ -45,3 +45,19 @@ viola: {
     human: true
 }
 ```
+
+### JSON Superset
+
+```shell
+$ cue export json-ss.cue
+{
+    "one": 1,
+    "two": 2,
+    "two-and-a-half": 2.5,
+    "list": [
+        1,
+        2,
+        3
+    ]
+}
+```
