@@ -17,3 +17,15 @@ $ cue export json.cue
     ]
 }
 ```
+
+### Duplicate Fields
+
+```shell
+$ cue eval dup.cue
+a: 4
+s: {
+    b: 2
+    c: 2
+}
+l: [1, 2]
+```
