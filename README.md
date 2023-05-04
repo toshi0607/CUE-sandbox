@@ -83,3 +83,17 @@ languages.1.name: invalid value "dutch" (out of bound =~"^\\p{Lu}"):
     ./schema.cue:3:8
     ./data.yaml:5:12
 ```
+
+### Order is irrelevant
+
+```shell
+$ cue eval -i order.cue
+a: {
+    x: 1
+    y: 2
+}
+b: {
+    x: 1
+    y: 2
+}
+```
