@@ -61,3 +61,16 @@ $ cue export json-ss.cue
     ]
 }
 ```
+
+### Definitions
+
+```shell
+cue export schema.cue
+{
+    "lossy": {
+        "address": "1.2.3.4",
+        "port": 8888,
+        "protocol": "udp"
+    }
+}
+```
