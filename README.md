@@ -113,3 +113,25 @@ $ cue export fold.cue
     }
 }
 ```
+
+### Type Hierarchy
+
+```shell
+cue eval types.cue
+point: {
+    x: number
+    y: number
+}
+xaxis: {
+    x: number
+    y: 0
+}
+yaxis: {
+    x: 0
+    y: number
+}
+origin: {
+    x: 0
+    y: 0
+}
+```
