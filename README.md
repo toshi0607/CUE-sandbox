@@ -135,3 +135,34 @@ origin: {
     y: 0
 }
 ```
+
+### Bottom / Error
+
+```shell
+$ cue eval -i bottom.cue
+a: _|_ // a: conflicting values 5 and 4
+l: [1, _|_, // l.1: conflicting values 3 and 2
+]
+list: [0, 1, 2]
+val: _|_ // val: index out of range [3] with length 3
+
+$ cue eval bottom.cue
+a: conflicting values 5 and 4:
+    ./bottom.cue:1:4
+    ./bottom.cue:2:4
+l.1: conflicting values 3 and 2:
+    ./bottom.cue:4:9
+    ./bottom.cue:5:9
+val: index out of range [3] with length 3:
+    ./bottom.cue:8:11
+
+$ cue vet bottom.cue
+a: conflicting values 5 and 4:
+    ./bottom.cue:1:4
+    ./bottom.cue:2:4
+l.1: conflicting values 3 and 2:
+    ./bottom.cue:4:9
+    ./bottom.cue:5:9
+val: index out of range [3] with length 3:
+    ./bottom.cue:8:11
+```
