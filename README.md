@@ -49,7 +49,7 @@ viola: {
 ### JSON Superset
 
 ```shell
-$ cue export json-ss.cue
+$ cue export json.cue
 {
     "one": 1,
     "two": 2,
