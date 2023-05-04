@@ -228,3 +228,17 @@ b: {
     feild: _|_ // b.feild: field not allowed
 }
 ```
+
+### Definitions (type)
+
+```shell
+$ cue eval -ic defs.cue
+msg: "Hello world!"
+a: {
+    field: 3
+}
+err: {
+    field: int
+    feild: _|_ // err.feild: field not allowed
+}
+```
