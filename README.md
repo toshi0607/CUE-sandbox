@@ -215,3 +215,16 @@ $ cue export bytes.cue
 $ echo "A2FiYw==" | base64 -d
 abc%
 ```
+
+### Closed structs
+
+```shell
+cue eval -i structs.cue
+a: {
+    field: int
+}
+b: {
+    field: int
+    feild: _|_ // b.feild: field not allowed
+}
+```
