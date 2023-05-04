@@ -74,3 +74,12 @@ cue export schema.cue
     }
 }
 ```
+
+### Validation
+
+```shell
+$ cue vet schema.cue data.yaml
+languages.1.name: invalid value "dutch" (out of bound =~"^\\p{Lu}"):
+    ./schema.cue:3:8
+    ./data.yaml:5:12
+```
