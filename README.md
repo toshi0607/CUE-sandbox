@@ -166,3 +166,14 @@ l.1: conflicting values 3 and 2:
 val: index out of range [3] with length 3:
     ./bottom.cue:8:11
 ```
+
+### Numbers
+
+```shell
+$ cue eval -i numbers.cue
+a: 4
+b: 4.0
+c: _|_ // c: conflicting values int and 4.0 (mismatched types int and float)
+d: 4
+e: [1_234, 5M, 1.5Gi, 0x1000_0000]
+```
