@@ -97,3 +97,19 @@ b: {
     y: 2
 }
 ```
+
+### Folding of Single-Field Structs
+
+```shell
+$ cue export fold.cue
+{
+    "outer": {
+        "middle1": {
+            "inner": 3
+        },
+        "middle2": {
+            "inner": 7
+        }
+    }
+}
+```
