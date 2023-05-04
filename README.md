@@ -29,3 +29,19 @@ s: {
 }
 l: [1, 2]
 ```
+
+### Constraints
+
+```shell
+$ cue eval check.cue
+schema: {
+    name:  string
+    age:   int
+    human: true
+}
+viola: {
+    name:  "Viola"
+    age:   38
+    human: true
+}
+```
