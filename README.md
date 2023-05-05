@@ -362,3 +362,17 @@ a: {
 v: 2
 w: 5
 ```
+
+### Aliases
+
+```shell
+$ cue eval alias.cue
+a: {
+    d: 3
+}
+b: {
+    a: {
+        c: 3
+    }
+}
+```
