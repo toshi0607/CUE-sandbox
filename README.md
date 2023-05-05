@@ -350,3 +350,15 @@ a: {
 }
 b: 1
 ```
+
+### Accessing Fields
+
+```shell
+$ cue eval selectors.cue
+a: {
+    b:     2
+    "c-e": 5
+}
+v: 2
+w: 5
+```
