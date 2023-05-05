@@ -288,3 +288,15 @@ floor: {
     hasExit: false
 }
 ```
+
+### Bounds
+
+```shell
+$ cue eval -ic bounds.cue
+a:  3.5
+b:  _|_ // b: conflicting values int and 3.5 (mismatched types int and float)
+c:  3
+d:  "ma"
+e:  _|_ // e: invalid value "mu" (out of bound <"mo")
+r1: >=5 & <8
+```
