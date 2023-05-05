@@ -300,3 +300,12 @@ d:  "ma"
 e:  _|_ // e: invalid value "mu" (out of bound <"mo")
 r1: >=5 & <8
 ```
+
+### Predefined Bounds
+
+```shell
+$ cue eval -ic bound.cue
+a: _|_ // a: invalid value -1 (out of bound >=0)
+b: 128
+c: 2000000000
+```
