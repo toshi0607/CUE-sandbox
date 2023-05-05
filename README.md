@@ -275,3 +275,16 @@ $ cue eval defaults.cue
 replicas: 1
 protocol: "tcp" | "udp"
 ```
+
+### Disjunctions of Structs
+
+```shell
+$ cue eval sumstruct.cue 
+floor: {
+    level:   0 | 1
+    hasExit: true
+} | {
+    level:   -1 | 2 | 3
+    hasExit: false
+}
+```
