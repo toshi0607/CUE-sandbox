@@ -319,3 +319,21 @@ PrivateIP: [10, uint8, uint8, uint8] | [192, 168, uint8, uint8] | [172, uint & >
 myIP: [10, 2, 3, 4]
 yourIP: _|_ // yourIP: 3 errors in empty disjunction: (and 3 more errors)
 ```
+
+### Templates
+
+```shell
+$ cue eval templates.cue
+job: {
+    list: {
+        name:     "list"
+        replicas: 1
+        command:  "ls"
+    }
+    nginx: {
+        name:     "nginx"
+        command:  "nginx"
+        replicas: 2
+    }
+}
+```
