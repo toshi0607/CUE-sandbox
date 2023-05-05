@@ -242,3 +242,12 @@ err: {
     feild: _|_ // err.feild: field not allowed
 }
 ```
+
+### Structs
+
+```shell
+$ cue eval -c structs.cue
+b: {
+    foo: 3
+}
+```
