@@ -337,3 +337,16 @@ job: {
     }
 }
 ```
+
+### References and Scopes
+
+```shell
+$ cue eval scopes.cue
+v: 1
+a: {
+    v: 2
+    c: 1
+    b: 2
+}
+b: 1
+```
