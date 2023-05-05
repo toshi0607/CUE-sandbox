@@ -376,3 +376,10 @@ b: {
     }
 }
 ```
+
+### Emit Values
+
+```shell
+$ cue export emit.cue
+"Hello world!"
+```
