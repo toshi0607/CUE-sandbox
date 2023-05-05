@@ -251,3 +251,19 @@ b: {
     foo: 3
 }
 ```
+
+### Disjunctions
+
+```shell
+$ cue eval disjunctions.cue
+#Conn: {
+    address:  string
+    port:     int
+    protocol: "tcp" | "udp"
+}
+lossy: {
+    address:  "1.2.3.4"
+    port:     8888
+    protocol: "udp"
+}
+```
