@@ -383,3 +383,13 @@ b: {
 $ cue export emit.cue
 "Hello world!"
 ```
+
+### Reference Cycles
+
+```shell
+$ cue eval -i -c cycle.cue
+x: 200
+y: 100
+a: b + 100
+b: a - 100
+```
