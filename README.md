@@ -267,3 +267,11 @@ lossy: {
     protocol: "udp"
 }
 ```
+
+### Default Values
+
+```shell
+$ cue eval defaults.cue
+replicas: 1
+protocol: "tcp" | "udp"
+```
