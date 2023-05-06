@@ -407,3 +407,13 @@ selectors: {
     app:  "foo"
 }
 ```
+
+### Hidden Fields
+
+```shell
+$ cue export hidden.cue
+{
+    "_foo": 2,
+    "foo": 4
+}
+```
