@@ -393,3 +393,17 @@ y: 100
 a: b + 100
 b: a - 100
 ```
+
+### Cycles in Fields
+
+```shell
+$ cue eval cycleref.cue
+labels: {
+    app:  "foo"
+    name: "bar"
+}
+selectors: {
+    name: "bar"
+    app:  "foo"
+}
+```
