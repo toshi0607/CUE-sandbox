@@ -519,3 +519,14 @@ c: =~"^[a-z]{3}$"
 d: "foo"
 e: _|_ // e: invalid value "foo bar" (out of bound =~"^[a-z]{3}$")
 ```
+
+### Null Coalescing
+
+```shell
+$ cue eval coalesce.cue
+list: ["Cat", "Mouse", "Dog"]
+a: "Cat"
+b: "None"
+n: [null]
+v: "default"
+```
