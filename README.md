@@ -456,3 +456,15 @@ sandwich: {
     hasButter: true
 }
 ```
+
+### List Comprehensions
+
+```shell
+$ cue export listcomp.cue
+[
+    4,
+    16,
+    36,
+    64
+]
+```
