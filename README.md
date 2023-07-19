@@ -508,3 +508,14 @@ $ cue export conditional.cue
     "justification": "sorry"
 }
 ```
+
+### Regular expressions
+
+```shell
+$ cue eval -i regexp.cue
+a: true
+b: true
+c: =~"^[a-z]{3}$"
+d: "foo"
+e: _|_ // e: invalid value "foo bar" (out of bound =~"^[a-z]{3}$")
+```
