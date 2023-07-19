@@ -489,3 +489,22 @@ munich: {
     nameLen: 6
 }
 ```
+
+### Conditional Fields
+
+```shell
+$ cue eval conditional.cue
+justification: string
+price:         200
+
+$ cue export conditional.cue
+justification: incomplete value string:
+    ./conditional.cue:5:20
+
+# add justification: "sorry"
+$ cue export conditional.cue
+{
+    "price": 200,
+    "justification": "sorry"
+}
+```
