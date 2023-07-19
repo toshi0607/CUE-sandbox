@@ -468,3 +468,24 @@ $ cue export listcomp.cue
     64
 ]
 ```
+
+### Field Comprehensions
+
+```shell
+$ cue eval -c fieldcomp.cue
+barcelona: {
+    pos:     1
+    name:    "Barcelona"
+    nameLen: 9
+}
+shanghai: {
+    pos:     2
+    name:    "Shanghai"
+    nameLen: 8
+}
+munich: {
+    pos:     3
+    name:    "Munich"
+    nameLen: 6
+}
+```
