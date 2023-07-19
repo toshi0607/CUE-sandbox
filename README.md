@@ -417,3 +417,14 @@ $ cue export hidden.cue
     "foo": 4
 }
 ```
+
+### Operators
+
+```shell
+$ cue eval -i op.cue
+a: 1.5
+b: 1
+c: "blahblahblah"
+d: [1, 2, 3, 1, 2, 3, 1, 2, 3]
+e: true
+```
