@@ -530,3 +530,11 @@ b: "None"
 n: [null]
 v: "default"
 ```
+
+### Packages
+
+```shell
+$ cue eval a.cue b.cue
+foo: 100
+bar: 200
+```
