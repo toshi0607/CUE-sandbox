@@ -440,3 +440,19 @@ $ cue eval interpolation.cue
 $ cue export interpolation.cue
 "You are 14 dollars over budget!"
 ```
+
+### Interpolation of Field Names
+
+```shell
+$ cue eval genfield.cue
+sandwich.butterAndCheese: reference "hasCheese" not found:
+    ./genfield.cue:5:35
+
+# comment out butterAndCheese: hasButter && hasCheese
+$ cue eval genfield.cue
+sandwich: {
+    type:      "Cheese"
+    hasCheese: true
+    hasButter: true
+}
+```
