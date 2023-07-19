@@ -538,3 +538,10 @@ $ cue eval a.cue b.cue
 foo: 100
 bar: 200
 ```
+
+### Imports
+
+```shell
+$ cue eval imports.cue
+data: "{\"a\":2.6457513110645907}"
+```
