@@ -428,3 +428,15 @@ c: "blahblahblah"
 d: [1, 2, 3, 1, 2, 3, 1, 2, 3]
 e: true
 ```
+
+### Interpolation
+
+```shell
+$ cue eval interpolation.cue
+"You are 14 dollars over budget!"
+#cost:   102
+#budget: 88
+
+$ cue export interpolation.cue
+"You are 14 dollars over budget!"
+```
