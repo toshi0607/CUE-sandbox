@@ -587,6 +587,17 @@ configMap: prometheus: {
                         groups:
                         - name: rules.yaml
 
+$ cue import ./... -p kube -l 'strings.ToCamel(kind)' -l metadata.name -f -R
+$ cat mon/prometheus/configmap.cue | head
+package kube
 
+import yaml656e63 "encoding/yaml"
+
+configMap: prometheus: {
+        apiVersion: "v1"
+        kind:       "ConfigMap"
+        metadata: name: "prometheus"
+        data: {
+                "alert.rules": yaml656e63.Marshal(_cue_alert_rules)
 
 ```
