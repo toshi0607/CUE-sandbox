@@ -600,4 +600,15 @@ configMap: prometheus: {
         data: {
                 "alert.rules": yaml656e63.Marshal(_cue_alert_rules)
 
+$ cue eval ./mon/prometheus -e configMap.prometheus | head
+apiVersion: "v1"
+kind:       "ConfigMap"
+metadata: {
+    name: "prometheus"
+}
+data: {
+    "alert.rules": """
+        groups:
+          - name: rules.yaml
+            rules:
 ```
