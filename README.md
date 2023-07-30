@@ -545,3 +545,48 @@ bar: 200
 $ cue eval imports.cue
 data: "{\"a\":2.6457513110645907}"
 ```
+
+### Kuberentes
+
+```console
+$ cd kubernetes/original
+$ cue mod init
+$ go mod init example.com
+go: creating new go.mod: module example.com
+go: to add module requirements and sums:
+        go mod tidy
+
+$ cd services
+$ cue import ./...
+path, list, or files flag needed to handle multiple objects in file ./services/frontend/bartender/kube.yaml
+$ cue import ./... -p kube
+path, list, or files flag needed to handle multiple objects in file ./services/frontend/bartender/kube.yaml
+
+$ cue import ./... -p kube -l 'strings.ToCamel(kind)' -l metadata.name -f
+$ $ tree . | head
+.
+├── frontend
+│   ├── bartender
+│   │   ├── kube.cue
+│   │   └── kube.yaml
+│   ├── breaddispatcher
+│   │   ├── kube.cue
+│   │   └── kube.yaml
+│   ├── host
+│   │   ├── kube.cue
+
+$ cat mon/prometheus/configmap.cue | head
+package kube
+
+configMap: prometheus: {
+        apiVersion: "v1"
+        kind:       "ConfigMap"
+        metadata: name: "prometheus"
+        data: {
+                "alert.rules": """
+                        groups:
+                        - name: rules.yaml
+
+
+
+```
